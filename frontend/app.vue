@@ -53,7 +53,7 @@ import '@coreui/coreui/dist/css/coreui.min.css'
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
-const CHAIN_ID = 5432;
+const CHAIN_ID = 314159;
 const RPC_DEFAULT_ENDPOINT = "https://rpc.ankr.com/filecoin_testnet";
 const BLOCK_EXPLORER = "https://calibration.filfox.info";
 const WEB_SERVICE = "https://ticketing-service-test.azurewebsites.net";
