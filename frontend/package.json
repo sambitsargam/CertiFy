@@ -1,0 +1,28 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@types/node": "^18.16.19",
+    "nuxt": "^3.6.2"
+  },
+  "dependencies": {
+    "@coreui/coreui": "^4.2.6",
+    "@coreui/vue": "^4.9.0",
+    "axios": "^1.4.0",
+    "ethers": "^6.6.3",
+    "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.9.0",
+    "qrcode.vue": "^3.4.0",
+    "vue-qrcode-reader": "^5.0.0",
+    "vue3-lottie": "^3.0.0",
+    "vue3-qr-reader": "^1.0.0"
+  }
+}
