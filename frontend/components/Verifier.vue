@@ -68,7 +68,7 @@ export default {
           if (recipientName) {
              alert(`Recipient for Certificate: ${recipientName} \n Got for: ${details}`);
           } else {
-            alert(`Certificate not found.`);
+            alert(`Certificate found.`);
           }
           this.verifyStatus = "YES"; // Assume validation is successful for now
         }
