@@ -26,7 +26,7 @@
             <qrcode-vue class="qr-code" render-as="svg" background="none" :value="ticket" :size="50" level="H" />
           </div>
         </div>
-        <CButton class="download-button" color="primary" size="sm" @click="downloadAsPNG">Download Certificate</CButton>
+        <CButton class="download-button" color="primary" size="sm" @click="savetofleek">Save to IPFS using Fleek</CButton>
         <div v-if="purchasing" class="loading-section">
           <CSpinner style="width: 50px; height: 50px" color="warning" />
         </div>
@@ -85,9 +85,17 @@ export default {
         console.error('Error generating certificate:', error);
       }
     },
-    async downloadAsPNG() {
-      alert('Your Browser Does Not Support This Feature... Please Take A Screenshot Of The Certificate');
-    },
+    async savetofleek(filename, content) {
+    const uploadToIPFS = async (filename, content) => {
+        const result = await fleekSdk.ipfs().add({
+            path: filename,
+            content: content,
+        });
+        return result;
+    };
+
+    return uploadToIPFS(filename, content);
+},
     async purchaseTicket() {
       try {
         this.purchasing = true;

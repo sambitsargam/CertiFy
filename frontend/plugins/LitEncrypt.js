@@ -7,7 +7,7 @@ import {
   importSymmetricKey 
 } from '@lit-protocol/crypto';
 import { blobToBase64String, base64StringToBlob } from "@lit-protocol/misc-browser";
-import { ABI, CHAIN_ID, CHAIN_NAME, CONTRACT_ID } from "../constants";
+import { ABI, CHAIN_ID, CHAIN_NAME, CONTRACT_ID } from "./constants";
 
 const client = new LitJsSdk.LitNodeClient({ debug: false });
 
@@ -15,7 +15,7 @@ const evmContractConditions = [
   {
     contractAddress: CONTRACT_ID,
     chain: CHAIN_NAME,
-    functionName: "doctorExists",
+    functionName: "certiExists",
     functionParams: [":userAddress"],
     functionAbi: {
       "inputs": [
@@ -25,7 +25,7 @@ const evmContractConditions = [
           "type": "address"
         }
       ],
-      "name": "doctorExists",
+      "name": "certiExists",
       "outputs": [
         {
           "internalType": "bool",
